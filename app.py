@@ -18,6 +18,15 @@ st.title("Moorphic Dashboard")
 #load sidebar 
 
 st.sidebar.image('./icons/user.png')
+st.sidebar.title("John Doe")
+st.sidebar.header("Gender, Age")
+
+col1, col2 = st.sidebar.columns(2)
+col1.metric("Height", "5' 2")
+col2.metric("Weight", "125 lb")
+
+st.sidebar.radio("Activity Summary", ["Daily", "Weekly", "Monthly", "Yearly"])
+
 
 # Add all your applications (pages) here
 app.add_page("Home", home.app)
