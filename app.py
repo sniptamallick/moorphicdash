@@ -3,7 +3,7 @@ import streamlit as st
 # Custom imports 
 from multipage import MultiPage
 from datetime import date
-from pages import home, settings, statistics
+from pages import home, settings, badges, statistics
 
 # Create an instance of the app 
 app = MultiPage()
@@ -31,6 +31,7 @@ st.sidebar.radio("Activity Summary", ["Daily", "Weekly", "Monthly", "Yearly"])
 # Add all your applications (pages) here
 app.add_page("Home", home.app)
 app.add_page("Statistics", statistics.app)
+app.add_page("Badges", badges.app)
 app.add_page("Settings", settings.app)
 
 # The main app
